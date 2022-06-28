@@ -1,0 +1,267 @@
+\documentclass[11pt]{elegantbook}
+
+\title{Modern Quantum Mechanics}
+\subtitle{--An abstract}
+
+\author{Grant}
+\institute{DEP, THU}
+\date{\today}
+
+\cover{R-C(1).jpg}
+
+\definecolor{customcolor}{RGB}{32,178,170}
+\colorlet{coverlinecolor}{customcolor}
+
+\begin{document}
+
+\maketitle
+
+\frontmatter
+\tableofcontents
+
+\mainmatter
+
+\chapter{Fundamental Concepts}
+
+Our knowledge of the physical world comes from making assumptions about nature, 
+formulating these assumptions into postulates, deriving predictions from those 
+postulates, and testing those predictions against experiment.
+
+\section{The Stern-Gerlach Experiment}
+
+It is conceived by O. Stern in 1921 and carried out in Frankfurt by him in collaboration 
+with W. Gerlach in 1922.
+
+In a certain sense, a two-state system of the Stern-Gerlach type is the least classical, 
+most quantum-mechanical system.
+
+\subsection{Description of the Experiment}
+
+We now present a brief discussion of \textbf{the Stern-Gerlach experiment}.
+
+\begin{enumerate}
+  \item Silver (Ag) atoms are heated in an oven, which has a small hole through which 
+  some of the silver atoms escape.
+  \item The beam goes through a collimator and is then subjected to an inhomogeneous 
+  magnetic field produced by a pair of pole pieces, one of which has a very sharp edge.
+\end{enumerate}
+
+If we ignore the nuclear spin, the atom have an angular momentum of the single 47th (5s) 
+electron. As a result, the atom possesses a magnetic moment equal to the spin magnetic moment of the 
+47th electron, 
+\begin{equation}
+  \bm{\mu}\propto \bm{S},
+\end{equation}
+where the precise propotionality factor turns out to be $e/m_ec$\footnote{$e<0$ in this book} 
+to an accuracy of about $0.2\%$.
+
+The z-component of the force is given by 
+\begin{equation}
+  F_z=\frac{\partial}{\partial z}(\bm{\mu}\cdot \bm{B})\simeq\mu_z\frac{\partial B_z}{\partial z},
+\end{equation}
+where we have ignored the components in directions other than the z-direction. Obviously, 
+the SG (Stren-Gerlach) apparatus "measures" the z-component of $\bm{\mu}$ or, equivalently, 
+the z-component of $\bm{S}$ up to a proportionality factor.
+
+The atoms in the oven are randomly oriented. If the electron were like a classical spinning 
+object, we would expect all values of $\mu_z$ to be realized between $\vert\bm{\mu}\vert$ and $-\vert\bm{\mu}\vert$. 
+This would lead us to expect a continuous bundle of beams coming out of the apparatus.
+
+However, the apparatus splits the original silver beam from the oven into \textit{two distinct} components. 
+To the extent that $\bm{\mu}$ can be identified within a proportionality factor with the electron spin 
+$\bm{S}$, only two possible values of the z-component of $\bm{S}$ are observed to be possible, which 
+we call $S_z+$ and $S_z-$. Numerically it turns out that $\vert S_z\vert=\hbar/2$, where
+\begin{equation}
+  \hbar=1.0546\times 10^{-27}\rm{erg/s}=6.5822\times 10^{-16}\rm{eV/s}.
+\end{equation}
+This "quantization" of the electron spin angular momentum is the first important feature 
+we deduce from the Stern-Gerlach experiment.
+
+\subsection{Sequential Stern-Gerlach Experiments}
+
+Now consider a \textbf{sequential Stern-Gerlach experiment}.
+\begin{enumerate}
+  \item Through two SG$\hat{\bm{z}}$ apparatus
+  
+  Only one beam component coming out of the second apparatus, which is the same as the previous one.
+  \item Through SG$\hat{\bm{z}}$ apparatus, and then SG$\hat{\bm{x}}$ apparatus
+  
+  An $S_x+$ component and an $S_x-$ component coming out with the same intensities.
+  \item Through an SG$\hat{\bm{z}}$ and an SG$\hat{\bm{x}}$ apparatus, and then an SG$\hat{\bm{z}}$ apparatus
+  
+  Both an $S_z+$ component and an $S_z-$ component emerge from the third apparatus.
+\end{enumerate}
+
+\textbf{What a Surprise!} This example is often used to illustrate that in quantum mechanics we 
+cannot determine both $S_z$ and $S_x$ simultaneously, or the selection of the $S_x+$ beam 
+by the second apparatus (SG$\hat{\bm{x}}$) completely destroys any \textit{previous} 
+information about $S_z$.
+
+The peculiarities of quantum mechanics are imposed upon us by the experiment itself. 
+The limitation is, in fact, inherent in microscopic phenomena.
+
+\subsection{Analogy with Polarization of Light}
+
+We now digress to consider \textbf{the polarization of light waves}.
+
+Consider a monochromatic light wave propagating in the $z$-direction. We can definite an 
+\textit{x-polarized light} and \textit{y-polarized light}, 
+\begin{align}
+  \bm{E}&=E_0\hat{\bm{x}}\cos(kz-\omega t),\\
+  \bm{E}&=E_0\hat{\bm{y}}\cos(kz-\omega t).
+\end{align}
+
+As for filter, we now consider 2 examples.
+\begin{enumerate}
+  \item Through an $x$-filter and an $y$-filter 
+  
+  No light beam comes out.
+  \item Insert between the $x$-filter and the $y$-filter another Polaroid - $x'$-direction - 
+  that makes an angle of $45^\circ$ with the $x$-direction in the $xy$ plane 
+
+  There is a light beam coming out despite the fact that right after the beam went through the $x$-filter 
+  it did not have any polarization component in the $y$-direction.
+\end{enumerate}
+We'll find these situations are quite analogous to the situations that we encountered 
+earlier with the SG arrangement, provided that the following correspondence is made: 
+\begin{align}
+  \begin{split}
+    S_z\pm\rm{atoms}&\leftrightarrow x-,y-\rm{polarized\ light},\\
+    S_x\pm\rm{atoms}&\leftrightarrow x'-,y'-\rm{polarized\ light}.
+  \end{split}
+\end{align}
+
+We know the relation 
+\begin{align}
+  \begin{split}
+    E_0\bm{\hat{x}'}\cos(kz-\omega t)&=E_0[\frac{1}{\sqrt{2}}\bm{\hat{x}}\cos(kz-\omega t)+\frac{1}{\sqrt{2}}\bm{\hat{y}}\cos(kz-\omega t)],\\
+    E_0\bm{\hat{y}'}\cos(kz-\omega t)&=E_0[-\frac{1}{\sqrt{2}}\bm{\hat{x}}\cos(kz-\omega t)+\frac{1}{\sqrt{2}}\bm{\hat{y}}\cos(kz-\omega t)].
+  \end{split}
+\end{align}
+In the triple-filter arrangement the beam coming out of the first Polaroid is an $\bm{\hat{x}}$-polarized 
+beam, which can be regarded as a linear combination of an $x'$-polarized beam and a 
+$y'$-polarized beam. The second Polaroid selects the $x'$-polarized beam, which can in 
+turn be regraded as a linear combination of an $x$-polarized and a $y$-polarized beam. 
+And finally, the third Polaroid selects the $y$-polarized component.
+
+We might be able to represent the spin state of a silver atom by some kind of vector in 
+a new kind of two-dimensional vector space. Just represent the $S_x+$ state by a vector, 
+which we call a ket in the Dirac notation. So we conjecture 
+\begin{align}
+  \begin{split}
+    \vert S_x;+\rangle&=\frac{1}{\sqrt{2}}\vert S_z;+\rangle+\frac{1}{\sqrt{2}}\vert S_z;-\rangle\\
+    \vert S_z;+\rangle&=-\frac{1}{\sqrt{2}}\vert S_x;+\rangle+\frac{1}{\sqrt{2}}\vert S_x;-\rangle 
+  \end{split}
+\end{align}
+in analogy with (1.7).
+
+Thus the component coming out of the second apparatus is to be regarded as a superposition 
+of $S_z+$ and $S_z-$. It is for this reason that two components emerge from the third apparatus.
+
+Another question: \textbf{How to represent the $S_y\pm$ states?}
+
+This time we consider a circularly polarized beam of light, which can be obtained by letting 
+a linearly polarized light pass through a quarter-wave plate: 
+\begin{equation}
+  \bm{E}=E_0[\frac{1}{\sqrt{2}}\bm{\hat{x}}\cos(kz-\omega t)+\frac{1}{\sqrt{2}}\cos(kz-\omega t+\frac{\pi}{2})].
+\end{equation}
+It is more elegant to use complex notation:
+\begin{equation}
+  \bm{\epsilon}=[\frac{1}{\sqrt{2}}\bm{\hat{x}}e^{i(kz-\omega t)}+\frac{i}{\sqrt{2}}\bm{\hat{y}}e^{i(kz-\omega t)}],
+\end{equation}
+where we have used $i=e^{i\pi/2}$.
+
+We can make the following analogy with the spin states of silver atoms:
+\begin{align}
+  S_y+\rm{atom}&\leftrightarrow \rm{right\ circularly\ polarized\ beam},\\
+  S_y-\rm{atom}&\leftrightarrow \rm{left\ circularly\ polarized\ beam}.
+\end{align}
+Hence, if we are allowed to make the coefficients preceding base kets complex, there is 
+no difficulty in accommodating the $S_y\pm$ atoms in our vector space formalism:
+\begin{equation}
+  \vert S_y;\pm\rangle=\frac{1}{\sqrt{2}}\vert S_z;+\rangle\pm\frac{i}{\sqrt{2}}\vert S_z;-\rangle.
+\end{equation}
+We thus see that the two-dimensional vector space needed to describe the spin states of 
+silver atoms must be a \textit{complex} vector space; an arbitrary vector in the vector 
+space is written as a linear combination of the base vectors $\vert S_z;\pm\rangle$ with, 
+in general, complex coefficients.
+
+\newpage
+
+\section{Kets, Bras, and Operators}
+
+In this and the following section we formulate the basic mathematics of vector spaces 
+as used in quantum mechanics, which was developed by P. A. M. Dirac.
+
+\subsection{Ket Space}
+
+\begin{definition}[Ket]
+  A \textbf{state vector} in a complex vector space to represent a physical state in quantum mechanics.
+\end{definition}
+This state ket is postulated to contain complete information about the physical state; 
+everything we are allowed to ask about the state is contained in the ket.
+
+If we multiply ket $\vert\alpha\rangle$ by a complex number $c$, the resulting product 
+$c\vert\alpha\rangle$ is another ket. If $c$ is zero, the resulting ket is said to be a 
+\textbf{null ket}.
+
+\begin{postulate}
+$\vert\alpha\rangle$ and $c\vert\alpha\rangle$, with $c\neq 0$, represent the same physical state.
+\end{postulate}
+In other words, only the "direction" in vector space is of significance.
+
+\begin{definition}[operator]
+  A \textbf{matrix} in the vector space to represent an \textbf{observable}.
+\end{definition}
+Quite generally, an operator acts on a ket \textit{from the left}.
+
+\begin{definition}[eigenkets, eigenvalues and eigenstate]
+  Kets are \textbf{eigenkets} of operator $A$ if $A\vert\alpha\rangle$ is a constant times $\vert\alpha\rangle$, and 
+  the constants are called \textbf{eigenvalues} of operator $A$.
+
+  The physical state corresponding to an eigenket is called an \textbf{eigenstate}.
+\end{definition}
+
+The dimensionality of the vector space is determined by the number of alternatives in 
+Stern-Gerlach type experiments. More formally, we are concerned with an $N$-dimensional 
+vector space spanned by the $N$ eigenkets of observable $A$. Any arbitrary ket can be 
+wriiten as 
+\begin{equation}
+  \vert\alpha\rangle=\sum_N^ic_i\vert\alpha_i\rangle.
+\end{equation}
+
+\subsection{Bra Space and Inner Products}
+
+
+
+\newpage
+
+\section{Base Kets and Matrix Representations}
+
+\newpage
+
+\section{Measurements, Observables, and the Uncertainty Relations}
+
+\newpage
+
+\section{Change of Basis}
+
+\newpage
+
+\section{Position, Momentum, and Translation}
+
+\newpage
+
+\section{Wave Functions in Position and Momentum Space}
+
+\newpage
+
+
+\nocite{sakurai2020modern}
+\printbibliography[heading=bibintoc, title=\ebibname]
+
+\appendix
+
+\chapter{Mathematical Tools}
+
+\end{document}

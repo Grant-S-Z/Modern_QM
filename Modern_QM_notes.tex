@@ -205,17 +205,17 @@ If we multiply ket $\vert\alpha\rangle$ by a complex number $c$, the resulting p
 $c\vert\alpha\rangle$ is another ket. If $c$ is zero, the resulting ket is said to be a 
 \textbf{null ket}.
 
-\begin{postulate}
+\begin{postulate}[State vector]
 $\vert\alpha\rangle$ and $c\vert\alpha\rangle$, with $c\neq 0$, represent the same physical state.
 \end{postulate}
 In other words, only the "direction" in vector space is of significance.
 
-\begin{definition}[operator]
+\begin{definition}[Operator]
   A \textbf{matrix} in the vector space to represent an \textbf{observable}.
 \end{definition}
 Quite generally, an operator acts on a ket \textit{from the left}.
 
-\begin{definition}[eigenkets, eigenvalues and eigenstate]
+\begin{definition}[Eigenkets, eigenvalues and eigenstate]
   Kets are \textbf{eigenkets} of operator $A$ if $A\vert\alpha\rangle$ is a constant times $\vert\alpha\rangle$, and 
   the constants are called \textbf{eigenvalues} of operator $A$.
 
@@ -232,32 +232,188 @@ wriiten as
 
 \subsection{Bra Space and Inner Products}
 
+\begin{definition}[Bra and bra space]
+  \textbf{Bra} is an element belong to \textbf{bra space} which is dual to corresponding ket space.
+\end{definition}
+We call DC for \textbf{dual correspondence}.
 
+\begin{definition}[Inner product]
+  The \textbf{inner product} of a bra and a ket is 
+  \begin{equation}
+    \langle\beta\vert\alpha\rangle=(\langle\beta\vert)\cdot(\vert\alpha\rangle).
+  \end{equation}
+\end{definition}
+This product is a complex number in general, and we postulate two fundamental properties 
+of inner products below:
+\begin{itemize}
+  \item $\langle\beta\vert\alpha\rangle=\langle\alpha\vert\beta\rangle^*$.
+  \item $\langle\alpha\vert\alpha\rangle\geq 0$.
+\end{itemize}
+
+\begin{definition}[Orthogonal]
+  Two kets are said to be \textbf{orthogonal} if 
+  \begin{equation}
+    \langle\alpha\vert\beta\rangle = 0.
+  \end{equation}
+\end{definition}
+
+\begin{definition}[Normalized ket and norm]
+  Given a ket which is not a null ket, we can form a \textbf{normalized ket} $\vert\tilde{\alpha}\rangle$, where 
+  \begin{equation}
+    \vert\tilde{\alpha}\rangle=(\frac{1}{\sqrt{\langle\alpha\vert\alpha\rangle}})\vert\alpha\rangle,
+  \end{equation}
+  with the property 
+  \begin{equation}
+    \langle\tilde{\alpha}\vert\tilde{\alpha}\rangle=1.
+  \end{equation}
+
+  Generally, we call $\sqrt{\langle\alpha\vert\alpha\rangle}$ the \textbf{norm} of $\vert\alpha\rangle$.
+\end{definition}
+
+\subsection{Operators}
+
+\begin{definition}[Equality and null operator]
+  Operators are said to be \textbf{equal} if 
+  \begin{equation}
+    X\vert\alpha\rangle=Y\vert\alpha\rangle 
+  \end{equation}
+  for an \textit{arbitrary} ket in the ket space.
+
+  Operator is said to be the \textbf{null operator} if, for any \textit{arbitrary} ket $\vert\alpha\rangle$, we have 
+  \begin{equation}
+    X\vert\alpha\rangle=0.
+  \end{equation}
+\end{definition}
+Operators can be added and addition operations are \textbf{commutative} and \textbf{associative}.
+
+\begin{definition}[Hermitian adjoint and Hermitian]
+  We define the symbol $X^\dagger$ which satisfies that $\langle\alpha\rangle X^\dagger$ is dual to $X\vert\alpha\rangle$, 
+  and the operator $X^\dagger$ is called the \textbf{Hermitian adjoint}, or simply the adjoint, of X. 
+
+  An operator X is said to be \textbf{Hermitian} if 
+  \begin{equation}
+    X=X^\dagger.
+  \end{equation}
+\end{definition}
+
+\subsection{Multiplication}
+
+Operators can be multiplied. Multiplication is \textit{noncommutative} but associative.
+
+Notice that 
+\begin{equation}
+  (XY)^\dagger=Y^\dagger X^\dagger.
+\end{equation}
+
+So far, we have considered the following products: $\langle\beta\vert\alpha\rangle,X\vert\alpha\rangle,\langle\alpha\vert X,$ and $XY$. 
+We now can define a new product.
+
+\begin{definition}[Outer product]
+  \textbf{Outer product} of $\vert\beta\rangle$ and $\langle\alpha\vert$ is 
+  \begin{equation}
+    (\vert\beta\rangle)\cdot(\langle\alpha\vert)=\vert\beta\rangle\langle\alpha\vert.
+  \end{equation}
+\end{definition}
+We should emphasize that $\vert\beta\rangle\langle\alpha\vert$ is to be regarded as an operator; 
+hence it is fundamentally different from the inner product $\langle\beta\vert\alpha\rangle$, which is just a number.
+
+\subsection{The Associative Axiom}
+
+\begin{postulate}[Associative axiom of multiplication]
+  When we are dealing with legal multiplications among kets, bras and operators, the \textbf{associative property} is postulated.
+\end{postulate}
+
+\begin{corollary}
+  If $X=\vert\beta\rangle\langle\alpha\vert$, then 
+  \begin{equation}
+    X^\dagger=\vert\alpha\rangle\langle\beta\vert.
+  \end{equation}
+\end{corollary}
+
+\begin{corollary}
+  Use the fundamental property of the inner product and the axiom, we find 
+  \begin{equation}
+    \langle\beta\vert X\vert\alpha\rangle=\langle\alpha\vert X^\dagger\vert\beta\rangle^*.
+  \end{equation}
+
+  For a \textit{Hermitian X} we have 
+  \begin{equation}
+    \langle\beta\vert X\vert\alpha\rangle=\langle\alpha\vert X\vert\beta\rangle^*.
+  \end{equation}
+\end{corollary}
 
 \newpage
 
 \section{Base Kets and Matrix Representations}
 
+\subsection{Eigenkets of an Observable}
+
+
+
+\subsection{Eigenkets as Base Kets}
+
+\subsection{Matrix Representations}
+
+\subsection{Spin 1/2 Systems}
+
 \newpage
 
 \section{Measurements, Observables, and the Uncertainty Relations}
+
+\subsection{Measurements}
+
+\subsection{Spin 1/2 Systems, Once Again}
+
+\subsection{Compatible Observables}
+
+\subsection{Incompatible Observables}
+
+\subsection{The Uncertainty Relation}
 
 \newpage
 
 \section{Change of Basis}
 
+\subsection{Transformation Operator}
+
+\subsection{Transformation Matrix}
+
+\subsection{Diagonalization}
+
+\subsection{Unitary Equivalent Observables}
+
 \newpage
 
 \section{Position, Momentum, and Translation}
+
+\subsection{Continuous Spectra}
+
+\subsection{Position Eigenkets and Position Measurements}
+
+\subsection{Translation}
+
+\subsection{Momentum as a Generator of Translation}
+
+\subsection{The Canonical Commutation Relations}
 
 \newpage
 
 \section{Wave Functions in Position and Momentum Space}
 
+\subsection{Position-Space Wave Function}
+
+\subsection{Momentum Operator in the Position Basis}
+
+\subsection{Momentum-Space Wave Function}
+
+\subsection{Gaussian Wave Packets}
+
+\subsection{Generalization to Three Dimensions}
+
 \newpage
 
 
-\nocite{sakurai2020modern}
+\nocite{sakurai2020modern, dirac1981principles}
 \printbibliography[heading=bibintoc, title=\ebibname]
 
 \appendix
